@@ -1,12 +1,15 @@
 import React from 'react';
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
-
+import { Route} from "react-router-dom";
+import Splash from './components/splash/splash';
+import { HashRouter } from "react-router-dom";
 function App() {
   return(
-    <div>
-      hello
-    </div>
+    <HashRouter>
+      <Route path ='/' component={Splash}/>
+
+    </HashRouter>
   );
   // return (
   //   <div className="App">

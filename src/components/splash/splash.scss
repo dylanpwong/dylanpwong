@@ -1,0 +1,25 @@
+$page_size_width: 100vw;
+$page_size_height: 100vh;
+
+.mainContentContainer{
+    width: $page_size_width;
+    height: $page_size_height;
+    display: flex;
+    flex-direction: column;
+}
+.NavBar{
+    background-color: lightblue;
+}
+.backgroundImgContainer{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+}
+.backgroundImg{
+    width: 100%;
+    height: 100%;
+}
+.WelcomeButton{
+    background-color: lightblue;
+}

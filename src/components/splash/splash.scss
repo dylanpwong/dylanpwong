@@ -1,6 +1,21 @@
 $page_size_width: 100vw;
 $page_size_height: 100vh;
+//Grid reference
+// .container {
+//   display: grid;
+//   grid-template-columns: 50px 50px 50px 50px;
+//   grid-template-rows: auto;
+//   grid-template-areas: 
+//     "header header header header"
+//     "main main . sidebar"
+//     "footer footer footer footer";
+// }
 
+// .mainContentContainer{
+//     width: $page_size_width;
+//     height: $page_size_height;
+//     display: grid;
+// }
 .mainContentContainer{
     width: $page_size_width;
     height: $page_size_height;

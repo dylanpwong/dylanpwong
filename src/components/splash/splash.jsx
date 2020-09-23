@@ -1,6 +1,6 @@
 import React from 'react';
 import './splash.scss'
-import cafe from "../../images/cafe.gif";
+// import cafe from "../../images/cafe.gif";
 import backStreets from '../../images/backstreets.gif'
 class Splash extends React.Component{
     // constructor(props){

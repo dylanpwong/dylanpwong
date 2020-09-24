@@ -35,6 +35,57 @@ $page_size_height: 100vh;
     width: 100%;
     height: 100%;
 }
+//// Type writter stuff
 .WelcomeButton{
     background-color: lightblue;
+}
+.typeWritterContainer{
+
+    display: flex;
+    justify-content: center;
+}
+.typewritter{
+    width: 25%;
+}
+.typewritter > h1{
+    // width: 25%;
+    color: rgb(224, 103, 103);
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+  typing 0.875s steps(40, end),
+  blink-caret .75s step-end infinite;
+//   animation-delay: 1.5s;
+  
+}
+/* The typing effect */
+@keyframes typing {
+//   from { width: 0% }
+//   to { width: 100% }
+    0% {width: 0%}
+    // 70%{width: 60%;}
+    100%{width:100%}
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {//blinking
+  from, to { border-color: transparent }
+  50% { border-color: orange; }
+}   
+
+///Profile picture
+
+.profilePic{
+    border-radius: 6em;
+    animation:
+        pop-in 1.5s;
+     
+}
+
+@keyframes pop-in {
+0% { opacity: 0; transform: scale(0.5); }
+100% { opacity: 1; transform: scale(1); }
 }

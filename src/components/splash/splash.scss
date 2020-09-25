@@ -1,5 +1,9 @@
 $page_size_width: 100vw;
 $page_size_height: 100vh;
+$typing_time: 0.875s;
+$pop_in_time: 1.5s;
+$delay_time: ($pop_in_time - $typing_time)/$pop_in_time;
+$testP: 6%;
 //Grid reference
 // .container {
 //   display: grid;
@@ -21,9 +25,10 @@ $page_size_height: 100vh;
     height: $page_size_height;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
 }
 .NavBar{
-    background-color: lightblue;
+    background-color: rgb(69, 81, 112);
 }
 .backgroundImgContainer{
     width: 100%;
@@ -56,36 +61,46 @@ $page_size_height: 100vh;
   margin: 0 auto; /* Gives that scrolling effect as the typing happens */
   letter-spacing: .15em; /* Adjust as needed */
   animation: 
-  typing 0.875s steps(40, end),
-  blink-caret .75s step-end infinite;
-//   animation-delay: 1.5s;
-  
+  typing $typing_time + $pop_in_time steps(40, end),// + 1.5 pop in time
+  blink-caret .75s step-end infinite;  
 }
 /* The typing effect */
+@keyframes delayAni{
+    0% {width: 0%}
+    100%{width:0%}
+}
 @keyframes typing {
 //   from { width: 0% }
 //   to { width: 100% }
     0% {width: 0%}
+    60% {width: 0%}
     // 70%{width: 60%;}
     100%{width:100%}
 }
 
 /* The typewriter cursor effect */
 @keyframes blink-caret {//blinking
-  from, to { border-color: transparent }
+//   from, to { border-color: transparent }
+  0% { border-color: transparent }
   50% { border-color: orange; }
 }   
 
 ///Profile picture
+.profilePictureContainer{
+    // display: flex;
+    // align-items: center;
+}
 
 .profilePic{
     border-radius: 6em;
     animation:
-        pop-in 1.5s;
+        pop-in $pop_in_time;
      
 }
 
 @keyframes pop-in {
-0% { opacity: 0; transform: scale(0.5); }
+50% { opacity: 0; transform: scale(0.5); }
+80% {opacity:  1; transform: scale(1);}
+90% {opacity:  1; transform: scale(1.5);}
 100% { opacity: 1; transform: scale(1); }
 }

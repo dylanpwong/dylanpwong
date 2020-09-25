@@ -3,6 +3,7 @@ import './splash.scss'
 // import cafe from "../../images/cafe.gif";
 import backStreets from '../../images/backstreets.gif'
 import profilePic from '../../images/profile1.jpeg'
+import Footer from './footer';
 class Splash extends React.Component{
     // constructor(props){
     //     super(props);
@@ -17,14 +18,16 @@ class Splash extends React.Component{
               </div>
               <div className='profilePictureContainer'>
                 <img className='profilePic' src={profilePic} alt=""/>
-              </div>
-              <div className='typeWritterContainer'> {/* type writter container */}
-                <div className='typewritter'>
-                    <h1>
-                        Welcome
-                    </h1>
+                <div className='typeWritterContainer'> {/* type writter container */}
+                    <div className='typewritter'>
+                        <h1>
+                            Welcome
+                        </h1>
+                    </div>
                 </div>
               </div>
+                <Footer/>
+              {/* background image */}
             <div className='backgroundImgContainer'> {/*pos abs ignores flex*/}
               <img className='backgroundImg' src={backStreets} alt="cafe gif!" />
             </div>

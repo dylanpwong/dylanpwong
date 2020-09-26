@@ -28,6 +28,7 @@ $testP: 6%;
     justify-content: space-between;
 }
 .NavBar{
+    font-family: Helvetica;
     background-color: rgb(69, 81, 112);
 }
 .backgroundImgContainer{
@@ -51,6 +52,7 @@ $testP: 6%;
 }
 .typewritter{
     width: 25%;
+    overflow: auto;
 }
 .typewritter > h1{
     // width: 25%;
@@ -73,7 +75,7 @@ $testP: 6%;
 //   from { width: 0% }
 //   to { width: 100% }
     0% {width: 0%}
-    60% {width: 0%}
+    62% {width: 0%}
     // 70%{width: 60%;}
     100%{width:100%}
 }
@@ -99,7 +101,8 @@ $testP: 6%;
 }
 
 @keyframes pop-in {
-50% { opacity: 0; transform: scale(0.5); }
+// 0% { opacity: 0; transform: scale(0.0); }
+0% { opacity: 0; transform: scale(0.5); }
 80% {opacity:  1; transform: scale(1);}
 90% {opacity:  1; transform: scale(1.5);}
 100% { opacity: 1; transform: scale(1); }

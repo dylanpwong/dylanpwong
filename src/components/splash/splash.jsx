@@ -4,23 +4,28 @@ import cafe from "../../images/cafe.gif";
 import openFree from '../../images/openfree.gif';
 import ramenShop from '../../images/ramenShop.gif'
 import backStreets from '../../images/backstreets.gif'
-import fish from '../../images/fish.gif';
+// import fish from '../../images/fish.gif';
 import profilePic from '../../images/profile1.jpeg'
 import cherry from '../../images/cherry3.gif';
 import Footer from './footer';
-import side from '../../images/sideshot.jpg'
+// import side from '../../images/sideshot.jpg'
+import Type from './type';
+import resume from"./resume.pdf"
 class Splash extends React.Component{
     constructor(props){
         super(props);
 
         this.state={
             backgroundNumber: 0,
-            backgroundPics: [backStreets,cafe,openFree,ramenShop,fish],
+            backgroundPics: [backStreets,cafe,openFree,ramenShop],
             time: 0,
-            blinkerRemoved: false
+            blinkerRemoved: false,
+            about: false,
+            interval: null,
         }
         this.removeBlinker=this.removeBlinker.bind(this);
         this.timer=this.timer.bind(this);
+        this.aboutMe=this.aboutMe.bind(this);
     }
     componentDidMount(){
         const rand  = Math.floor(Math.random() * this.state.backgroundPics.length);
@@ -28,7 +33,7 @@ class Splash extends React.Component{
         this.setState({backgroundNumber: rand});
     }
     timer(){
-        setInterval(this.removeBlinker,2375000)
+        setInterval(this.removeBlinker,2735)
     }
 
     removeBlinker(){
@@ -40,6 +45,20 @@ class Splash extends React.Component{
             this.setState({blinkerRemoved: true});
         }
     }
+    toSite(site){
+        return(e)=>{
+            if(site==='Git'){
+                window.open("https://github.com/dylanpwong",'blank');
+            }else{
+                window.open("https://www.linkedin.com/in/dylan-wong-857139127/",'blank');
+            }
+
+        }
+    }
+    aboutMe(){
+        clearInterval(1);
+        this.setState({about:true})
+    }
 
     render(){
         // let m = magicCss
@@ -50,8 +69,8 @@ class Splash extends React.Component{
               {/* <img className ='imgSize'src={side} alt=""/> */}
               <div className="navName">
                 Dylan Wong 
-                <i className="devicon-linkedin-plain colored"></i>
-                <i className="devicon-github-plain-wordmark colored"></i>
+                <i onClick={this.toSite('Linkedin')}className="devicon-linkedin-plain colored iButtons"></i>
+                <i onClick={this.toSite('Git')} className="devicon-github-plain-wordmark colored iButtons"></i>
               </div>
             </div>
             <div>
@@ -63,7 +82,12 @@ class Splash extends React.Component{
                 {" "}
                 {/* type writter container */}
                 <div className="typewritter">
-                  <h1 id="firstSent"className='blinker'>Welcome, and Hello!</h1>
+                  <Type about={this.state.about}/>
+                  <div className='buttonsContainer'>{/*/ buttons*/}
+                    <div onClick={this.aboutMe}className='buttons'>About me</div>
+                    <a className ='Resume buttons'href={resume} target="_blank" rel="noopener noreferrer">Resume</a>
+                    <div className='buttons'>Projects</div>
+                  </div>
                 </div>
               </div>
             </div>

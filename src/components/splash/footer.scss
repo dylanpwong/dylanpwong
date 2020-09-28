@@ -1,5 +1,31 @@
 .footerContainer{
-    background-color: rgb(69, 81, 112) ;
-    height: 10%;
+    // background-color: rgb(69, 81, 112) ;
+    // height: 10%;
     // flex: 1;
+    position: absolute;
+    z-index: -1;
+    bottom:0;
+     border-bottom: 15vh solid rgb(4, 153, 153);
+      border-left: 100vw solid transparent;
+
+      animation: 
+        borderLeft 1.5s;
+}
+.footerContent{
+    padding-right: 1em;
+}
+.footerWrapper{
+    
+    display: flex;
+    // align-items: flex-end;
+    justify-content: flex-end;
+}
+@keyframes borderLeft{
+    0%{border-left: 1vw solid transparent;}
+    // 50%{border-right: 50vh}
+    100%{border-left: 100vw solid transparent;}
+}
+.contact{
+    display:flex;
+    flex-direction: column;
 }

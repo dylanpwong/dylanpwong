@@ -8,7 +8,7 @@ import backStreets from '../../images/backstreets.gif'
 import profilePic from '../../images/profile1.jpeg'
 import cherry from '../../images/cherry3.gif';
 import Footer from './footer';
-// import side from '../../images/sideshot.jpg'
+import side from '../../images/sideshot.jpg'
 import Type from './type';
 import resume from"./resume.pdf"
 class Splash extends React.Component{
@@ -22,7 +22,8 @@ class Splash extends React.Component{
             blinkerRemoved: false,
             about: false,
             interval: null,
-            welcome:true
+            welcome:true,
+            switch: false,
         }
         this.removeBlinker=this.removeBlinker.bind(this);
         this.timer=this.timer.bind(this);
@@ -57,9 +58,17 @@ class Splash extends React.Component{
         }
     }
     aboutMe(){
-        clearInterval(1);
-        this.setState({about:true,welcome:false})
+        
+        clearInterval(document.myInterval);
+        if(this.state.welcome){
+            document.getElementById("contentId").innerHTML="";
+        }else{
+            document.getElementById("contentId").innerHTML="";
+        }
+        // debugger;
+        this.setState({about:!this.state.about,welcome:!this.state.welcome,switch:true})
     }
+    
 
     render(){
         // let m = magicCss
@@ -78,14 +87,14 @@ class Splash extends React.Component{
               <img className="cherry" src={cherry} alt="" />
             </div>
             <div className="profilePictureContainer">
-              <img className="profilePic" src={profilePic} alt="" />
+              <img className="profilePic" src={side} alt="" />
               <div className="typeWritterContainer">
                 {" "}
                 {/* type writter container */}
                 <div className="typewritter">
-                  <Type about={this.state.about} welcome={this.state.welcome}/>
+                  <Type aboutMe={this.aboutMe}about={this.state.about} welcome={this.state.welcome}switch={this.state.switch}/>
                   <div className='buttonsContainer'>{/*/ buttons*/}
-                    <div onClick={this.aboutMe}className='buttons'>About me</div>
+                    <div onClick={this.aboutMe}className='buttons'>{!this.state.about?'About me':'Back'}</div>
                     <a className ='Resume buttons'href={resume} target="_blank" rel="noopener noreferrer">Resume</a>
                     <div className='buttons'>Projects</div>
                   </div>

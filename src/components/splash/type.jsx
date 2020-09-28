@@ -14,11 +14,14 @@ class Type extends React.Component{
             "Welcome, and Hello! Software Engineer with specialization in Fullstack Development",
         };
         this.aboutFiller=this.aboutFiller.bind(this);
+        this.welcomeFiller=this.welcomeFiller.bind(this);
     }
 
     componentDidUpdate(){
         if(this.props.about && !this.state.updated){
             setInterval(this.aboutFiller,40.5)
+        }else if(this.props.welcome &&!this.state.updated){
+            setInterval(this.welcomeFiller, 40.5);
         }
     }
 
@@ -33,7 +36,7 @@ class Type extends React.Component{
        }
     }
     welcomeFiller(){
-         const content = this.state.about.split("");
+         const content = this.state.welcome.split("");
        const ele = document.getElementById("welcomeId");
        if(this.state.currLetter<content.length){
            ele.append(content[this.state.currLetter])
@@ -46,7 +49,7 @@ class Type extends React.Component{
     render(){
         if(this.props.welcome){
             return(
-                <div id='welcomeId'>
+                <div id='welcomeId' className='aboutContent'>
 
                 </div>
             )

@@ -22,6 +22,7 @@ class Splash extends React.Component{
             blinkerRemoved: false,
             about: false,
             interval: null,
+            welcome:true
         }
         this.removeBlinker=this.removeBlinker.bind(this);
         this.timer=this.timer.bind(this);
@@ -29,7 +30,7 @@ class Splash extends React.Component{
     }
     componentDidMount(){
         const rand  = Math.floor(Math.random() * this.state.backgroundPics.length);
-        this.timer();
+        // this.timer();
         this.setState({backgroundNumber: rand});
     }
     timer(){
@@ -57,7 +58,7 @@ class Splash extends React.Component{
     }
     aboutMe(){
         clearInterval(1);
-        this.setState({about:true})
+        this.setState({about:true,welcome:false})
     }
 
     render(){
@@ -82,7 +83,7 @@ class Splash extends React.Component{
                 {" "}
                 {/* type writter container */}
                 <div className="typewritter">
-                  <Type about={this.state.about}/>
+                  <Type about={this.state.about} welcome={this.state.welcome}/>
                   <div className='buttonsContainer'>{/*/ buttons*/}
                     <div onClick={this.aboutMe}className='buttons'>About me</div>
                     <a className ='Resume buttons'href={resume} target="_blank" rel="noopener noreferrer">Resume</a>

@@ -228,7 +228,7 @@ height:15%;
 .buttonsContainer{
     display:flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     width:100%;
     // overflow: hidden;
 }
@@ -237,8 +237,8 @@ height:15%;
     padding: 3%;
     font-weight: 700;
     color: black;
-    // background-color: aquamarine;
-    background-image: linear-gradient(aquamarine, transparent);
+    background-color: aquamarine;
+    // background-image: linear-gradient(aquamarine, transparent);
 }
 .buttons:hover{
     cursor: pointer;
@@ -252,6 +252,7 @@ height:15%;
 }
 //about
 .aboutContent{
+    width:fit-content;
     padding:5px;
     color:rgb(224, 103, 103);
     display: block;//h1 stuff
@@ -263,9 +264,26 @@ height:15%;
     font-weight: bold;
     text-shadow: 2px 2px black;
     border-radius: 1em;
-   background-image: linear-gradient(aquamarine,aquamarine, transparent);
+    background-color: aquamarine;
+//    background-image: linear-gradient(aquamarine,aquamarine, transparent);
 }
 .aboutContent:hover{
     border-radius: 1em;
-   background-image: linear-gradient(aquamarine,aquamarine, transparent);
+//    background-image: linear-gradient(aquamarine,aquamarine, transparent);
+}
+//projects
+.Projectheader{
+    display: flex;
+    justify-content: center;
+}
+.projectPic{
+    width:25%;
+    height:auto;
+}
+.projectContainer{
+    display: flex;
+    justify-content: space-around
+}
+.projectContainer>div{
+    background-color: aquamarine;
 }

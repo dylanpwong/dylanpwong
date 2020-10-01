@@ -28,7 +28,7 @@ class Splash extends React.Component{
             interval: null,
             welcome:true,
             switch: false,
-            project:false,
+            project:true,
             cherry: true,
         }
         this.removeBlinker=this.removeBlinker.bind(this);
@@ -151,6 +151,7 @@ class Splash extends React.Component{
                   about={this.state.about}
                   welcome={this.state.welcome}
                   switch={this.state.switch}
+                  project={this.state.project}
                 />
                 {this.buttons()}
               </div>
@@ -163,8 +164,8 @@ class Splash extends React.Component{
         return (
           <div className="buttonsContainer">
             {/*/ buttons*/}
-            <div onClick={this.aboutMe} className="buttons">
-              {!this.state.about ? "About me" : "Back"}
+            <div onClick={this.aboutMe} className={this.state.project?"none":"buttons"}>
+              { !this.state.about ? "About me" :"Back"}
             </div>
             <a
               className="Resume buttons"
@@ -175,7 +176,7 @@ class Splash extends React.Component{
               Resume
             </a>
             <div onClick={this.toProjects} className="buttons">
-              Projects
+              {this.state.project?"back":"Projects"}
             </div>
           </div>
         );

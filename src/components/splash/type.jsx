@@ -13,15 +13,19 @@ class Type extends React.Component{
           interval: null,
           wel:this.props.welcome,
           abo: this.props.about,
+          projectUpdated: this.props.project,
           welcome:
             "Welcome, and Hello! Software Engineer with specialization in Fullstack Development",
         };
         this.aboutFiller=this.aboutFiller.bind(this);
         this.welcomeFiller=this.welcomeFiller.bind(this);
     }
+    componentDidMount(){
+        this.setState({interval:"reload"})//triggers updateFunc
+    }
 
     componentDidUpdate(){
-        // debugger
+    //    debugger
         if(this.state.wel !== this.props.welcome){
             // debugger
             this.setState({
@@ -51,6 +55,9 @@ class Type extends React.Component{
            document.myInterval = setInterval(this.welcomeFiller, 40.5);
         }
     }
+    // componentWillUnmount(){
+    //     // this.setState({updated:false,aboutUpdated:false})
+    // }
 
     aboutFiller(){
         // debugger

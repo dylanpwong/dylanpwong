@@ -28,7 +28,7 @@ class Splash extends React.Component{
             interval: null,
             welcome:true,
             switch: false,
-            project:true,
+            project:false,
             cherry: true,
         }
         this.removeBlinker=this.removeBlinker.bind(this);
@@ -80,18 +80,44 @@ class Splash extends React.Component{
     }
     toProjects(){
         clearInterval(document.myInterval);
-        this.setState({project: !this.state.project,cherry:false})
+        let element = document.getElementById("cherry");
+        element.classList.remove("cherry");
+        void element.offsetWidth; // trigger a DOM reflow
+        element.classList.add("cherry");
+        // document.getElementById('cherry').classList.remove('cherry');
+        // document.getElementById("cherry").classList.add('cherry');
+        this.setState({project: !this.state.project,cherry:true})
     }
     cherry(){
         if(this.state.cherry){
             return (
               <div>
-                <img className="cherry" src={cherry} alt="" />
+                <img id="cherry"className="cherry" src={cherry} alt="" />
               </div>
             );
         }else{
 
         }
+    }
+    toDemo(type){
+        return()=>{
+            switch(type){
+            case 'steam':
+                window.open("https://steamclone.herokuapp.com/#/");
+                break;
+            case 'royal':
+                window.open("https://royalcrossing.herokuapp.com/#/");
+                break;
+            case 'deception':
+                window.open("https://deception.herokuapp.com/#/");
+                break;
+            case 'konosuba':
+                window.open("https://dylanpwong.github.io/javascriptProject/");
+                break;
+                default:
+            }
+        }
+        // window.open("https://google.com");
     }
 
     homeContentSetter(){
@@ -101,21 +127,24 @@ class Splash extends React.Component{
                 <div>
                   <div className="Projectheader">Projects</div>
                   <div className="projectContainer">
-                    <div>
-                        <div>Steam Clone</div>
+                    <div onClick={this.toDemo("steam")} className="strawberry">
+                      <h1>Steam Clone</h1>
+                      <div>Click For Demo!</div>
                       <img className="projectPic" src={steam} alt="" />
                       <div>A clone of the popular online store Steam</div>
                     </div>
 
-                    <div>
-                        <div>Royal Crosing</div>
+                    <div onClick={this.toDemo("royal")}>
+                      <h1>Royal Crossing</h1>
+                      <div>Click For Demo!</div>
                       <img className="projectPic" src={royal} alt="" />
                       <div>
                         A clone of the popular story sharing website RoyalRoad
                       </div>
                     </div>
-                    <div>
-                        <div>Deception</div>
+                    <div onClick={this.toDemo("deception")}>
+                      <h1>Deception</h1>
+                      <div>Click For Demo!</div>
                       <img className="projectPic" src={deception} alt="" />
                       <div>
                         An online version of Deception Murder in HongKong. A
@@ -123,8 +152,9 @@ class Splash extends React.Component{
                         to discover who commited the crime.
                       </div>
                     </div>
-                    <div>
-                        <h1>Konosuba Fan Game</h1>
+                    <div onClick={this.toDemo("konosuba")}>
+                      <h1>Konosuba Fan Game</h1>
+                      <div>Click For Demo!</div>
                       <img className="projectPic" src={konosuba} alt="" />
                       <div>
                         A top down Beat'em Up based off the popular anime

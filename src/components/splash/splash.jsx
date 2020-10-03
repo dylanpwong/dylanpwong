@@ -48,8 +48,12 @@ class Splash extends React.Component{
     componentDidMount(){
         const rand  = Math.floor(Math.random() * this.state.backgroundPics.length);
         // this.timer();
-        setInterval(this.typeWritter,150)
+        document.mySelf = setInterval(this.typeWritter,100)
         this.setState({backgroundNumber: rand});
+    }
+    componentWillUnmount(){
+        clearInterval(document.mySelf);
+        clearInterval(document.myInterval);
     }
     typeWritter(){
         let ele =document.getElementById("iam");
@@ -106,8 +110,12 @@ class Splash extends React.Component{
         }
     }
     aboutMe(){
-        
+        // clearInterval(document.mySelf);
+        // for(let inter=2;inter<document.interval;inter++){
+        //     clearInterval(inter);
+        // }
         clearInterval(document.myInterval);
+        // debugger;
         if(this.state.welcome){
             document.getElementById("contentId").innerHTML="";
         }else{

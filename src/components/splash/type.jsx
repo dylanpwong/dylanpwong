@@ -47,22 +47,27 @@ class Type extends React.Component{
         }
         else if(this.props.about && !this.state.aboutUpdated){
             // debugger;
-            
+            clearInterval(document.myInterval);
            document.myInterval= setInterval(this.aboutFiller,40.5)
-        }else if(this.props.welcome &&!this.state.updated){
+        }else if(this.props.welcome && !this.state.updated){
             // debugger;
-            
+            clearInterval(document.myInterval);
            document.myInterval = setInterval(this.welcomeFiller, 40.5);
         }
     }
-    // componentWillUnmount(){
-    //     // this.setState({updated:false,aboutUpdated:false})
-    // }
+    componentWillUnmount(){
+        // this.setState({updated:false,aboutUpdated:false})
+        clearInterval(document.myInterval);
+    }
 
     aboutFiller(){
         // debugger
         const content = this.state.about.split("");
        const ele = document.getElementById("contentId");
+       if(!ele){
+           clearInterval(document.myInterval);
+           return;
+       }
        if(this.state.currLetter<content.length){
            ele.append(content[this.state.currLetter])
            this.setState({currLetter: this.state.currLetter + 1,aboutUpdated: true})
@@ -74,6 +79,10 @@ class Type extends React.Component{
         if(this.props.welcome){
             const content = this.state.welcome.split("");
           const ele = document.getElementById("contentId");
+          if (!ele) {
+            clearInterval(document.myInterval);
+            return;
+          }
           if(this.state.currLetter<content.length){
               ele.append(content[this.state.currLetter])
               this.setState({currLetter: this.state.currLetter + 1,updated: true})

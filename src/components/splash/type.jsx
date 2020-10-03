@@ -67,7 +67,7 @@ class Type extends React.Component{
            ele.append(content[this.state.currLetter])
            this.setState({currLetter: this.state.currLetter + 1,aboutUpdated: true})
        }else{
-           clearInterval(1);
+           clearInterval(document.myInterval);
        }
     }
     welcomeFiller(){
@@ -78,7 +78,7 @@ class Type extends React.Component{
               ele.append(content[this.state.currLetter])
               this.setState({currLetter: this.state.currLetter + 1,updated: true})
           }else{
-              clearInterval(1);
+              clearInterval(document.myInterval);
           }
 
         }

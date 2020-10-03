@@ -30,6 +30,11 @@ class Splash extends React.Component{
             switch: false,
             project:false,
             cherry: true,
+            role: ["A Fullstack Developer   ", "A Frontend Developer   ", "A Web Designer  ","A Software Engineer   ",
+                    "A Team Player   ","A Fullstack Engineer   ","A Critical Thinker   ","A Backend Engineer   "],
+            currRole:0,
+            roleIt: 0,
+            forward: true
         }
         this.removeBlinker=this.removeBlinker.bind(this);
         this.timer=this.timer.bind(this);
@@ -38,11 +43,44 @@ class Splash extends React.Component{
         this.homeContentSetter=this.homeContentSetter.bind(this);
         this.cherry=this.cherry.bind(this);
         this.buttons=this.buttons.bind(this);
+        this.typeWritter=this.typeWritter.bind(this)
     }
     componentDidMount(){
         const rand  = Math.floor(Math.random() * this.state.backgroundPics.length);
         // this.timer();
+        setInterval(this.typeWritter,150)
         this.setState({backgroundNumber: rand});
+    }
+    typeWritter(){
+        let ele =document.getElementById("iam");
+        let word = this.state.role[this.state.currRole].split("");
+        // debugger;
+        if(this.state.forward){
+            ele.append(word[this.state.roleIt]);
+        }else{
+            ele.innerHTML=(word.join("").slice(0,this.state.roleIt))
+        }
+        if(this.state.forward && this.state.roleIt + 1  < word.length){
+            this.setState({roleIt: this.state.roleIt + 1})
+        }else if(!this.state.forward &&this.state.roleIt>0){
+            this.setState({roleIt: this.state.roleIt - 1})
+        }
+            else{
+                if(!this.state.forward){
+                    this.setState({
+                      forward: !this.state.forward,
+                      currRole:
+                        this.state.currRole + 1 >= this.state.role.length
+                          ? 0
+                          : this.state.currRole + 1,
+                          
+                    });
+                }else{
+                    this.setState({forward: !this.state.forward})
+                }
+        }
+
+        // this.setState({ currRole: this.state.currRole >= this.state.role.length? 0: this.state.currRole + 1 });
     }
     timer(){
         setInterval(this.removeBlinker,2735)
@@ -225,6 +263,7 @@ class Splash extends React.Component{
                 <i onClick={this.toSite('Linkedin')}className="devicon-linkedin-plain colored iButtons"></i>
                 <i onClick={this.toSite('Git')} className="devicon-github-plain-wordmark colored iButtons"></i>
               </div>
+              <div id="iam" className="iam"></div>
             </div>
             {this.cherry()}
            {this.homeContentSetter()}

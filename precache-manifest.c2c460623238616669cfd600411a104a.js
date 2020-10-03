@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "07284702ecbc63295665e5a7625adce1",
+    "revision": "8b8bdc6aa5cfa3d14ad2edf76255e70d",
     "url": "/dylanpwong/index.html"
   },
   {
-    "revision": "a2f62fd2486337950f4a",
+    "revision": "079584a6dc97bfb78b38",
     "url": "/dylanpwong/static/css/main.9624aa2d.chunk.css"
   },
   {
-    "revision": "3c78b176258c3b7f60ae",
-    "url": "/dylanpwong/static/js/2.db1ea1ea.chunk.js"
+    "revision": "728cea03da2eae83bd1c",
+    "url": "/dylanpwong/static/js/2.7004339c.chunk.js"
   },
   {
     "revision": "c64c486544348f10a6d6c716950bc223",
-    "url": "/dylanpwong/static/js/2.db1ea1ea.chunk.js.LICENSE.txt"
+    "url": "/dylanpwong/static/js/2.7004339c.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "a2f62fd2486337950f4a",
-    "url": "/dylanpwong/static/js/main.aa6cd8a4.chunk.js"
+    "revision": "079584a6dc97bfb78b38",
+    "url": "/dylanpwong/static/js/main.6d1ec9d0.chunk.js"
   },
   {
     "revision": "69de2696b9518d29f2e0",
@@ -44,6 +44,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/dylanpwong/static/media/cnr.8c7880d8.otf"
   },
   {
+    "revision": "40ab8469396d0e76483b56812aad6c84",
+    "url": "/dylanpwong/static/media/cyberpunk.40ab8469.gif"
+  },
+  {
     "revision": "3c2a34886f0956c9141b8d96423a3b9e",
     "url": "/dylanpwong/static/media/deceptionGamePage.3c2a3488.png"
   },
@@ -52,8 +56,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/dylanpwong/static/media/gameplay.d14d1521.png"
   },
   {
+    "revision": "cfbaffbfac09aed776e0e9f18d68e55b",
+    "url": "/dylanpwong/static/media/goodfish.cfbaffbf.gif"
+  },
+  {
     "revision": "484b325cdb5bdd8bce6d8e3d131fda75",
     "url": "/dylanpwong/static/media/openfree.484b325c.gif"
+  },
+  {
+    "revision": "94901c700647bfc76df5ff81357e7b2b",
+    "url": "/dylanpwong/static/media/outsideFlag.94901c70.gif"
   },
   {
     "revision": "08eba1de6100c1f367c847c512ba0ad4",

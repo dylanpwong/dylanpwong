@@ -1,24 +1,27 @@
 {
   "files": {
     "main.css": "/dylanpwong/static/css/main.9624aa2d.chunk.css",
-    "main.js": "/dylanpwong/static/js/main.aa6cd8a4.chunk.js",
-    "main.js.map": "/dylanpwong/static/js/main.aa6cd8a4.chunk.js.map",
+    "main.js": "/dylanpwong/static/js/main.6d1ec9d0.chunk.js",
+    "main.js.map": "/dylanpwong/static/js/main.6d1ec9d0.chunk.js.map",
     "runtime-main.js": "/dylanpwong/static/js/runtime-main.ab0cff42.js",
     "runtime-main.js.map": "/dylanpwong/static/js/runtime-main.ab0cff42.js.map",
-    "static/js/2.db1ea1ea.chunk.js": "/dylanpwong/static/js/2.db1ea1ea.chunk.js",
-    "static/js/2.db1ea1ea.chunk.js.map": "/dylanpwong/static/js/2.db1ea1ea.chunk.js.map",
+    "static/js/2.7004339c.chunk.js": "/dylanpwong/static/js/2.7004339c.chunk.js",
+    "static/js/2.7004339c.chunk.js.map": "/dylanpwong/static/js/2.7004339c.chunk.js.map",
     "index.html": "/dylanpwong/index.html",
-    "precache-manifest.83ba22ea90f0523662d6f5ffb656a452.js": "/dylanpwong/precache-manifest.83ba22ea90f0523662d6f5ffb656a452.js",
+    "precache-manifest.c2c460623238616669cfd600411a104a.js": "/dylanpwong/precache-manifest.c2c460623238616669cfd600411a104a.js",
     "service-worker.js": "/dylanpwong/service-worker.js",
     "static/css/main.9624aa2d.chunk.css.map": "/dylanpwong/static/css/main.9624aa2d.chunk.css.map",
-    "static/js/2.db1ea1ea.chunk.js.LICENSE.txt": "/dylanpwong/static/js/2.db1ea1ea.chunk.js.LICENSE.txt",
+    "static/js/2.7004339c.chunk.js.LICENSE.txt": "/dylanpwong/static/js/2.7004339c.chunk.js.LICENSE.txt",
     "static/media/splash.scss": "/dylanpwong/static/media/cnr.8c7880d8.otf",
     "static/media/backstreets.gif": "/dylanpwong/static/media/backstreets.ae3799c1.gif",
     "static/media/cafe.gif": "/dylanpwong/static/media/cafe.e058fa97.gif",
     "static/media/cherry3.gif": "/dylanpwong/static/media/cherry3.6be89b96.gif",
+    "static/media/cyberpunk.gif": "/dylanpwong/static/media/cyberpunk.40ab8469.gif",
     "static/media/deceptionGamePage.png": "/dylanpwong/static/media/deceptionGamePage.3c2a3488.png",
     "static/media/gameplay.png": "/dylanpwong/static/media/gameplay.d14d1521.png",
+    "static/media/goodfish.gif": "/dylanpwong/static/media/goodfish.cfbaffbf.gif",
     "static/media/openfree.gif": "/dylanpwong/static/media/openfree.484b325c.gif",
+    "static/media/outsideFlag.gif": "/dylanpwong/static/media/outsideFlag.94901c70.gif",
     "static/media/ramenShop.gif": "/dylanpwong/static/media/ramenShop.08eba1de.gif",
     "static/media/resizedRC.png": "/dylanpwong/static/media/resizedRC.b8376231.png",
     "static/media/resume.pdf": "/dylanpwong/static/media/resume.b9fe382f.pdf",
@@ -27,8 +30,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.ab0cff42.js",
-    "static/js/2.db1ea1ea.chunk.js",
+    "static/js/2.7004339c.chunk.js",
     "static/css/main.9624aa2d.chunk.css",
-    "static/js/main.aa6cd8a4.chunk.js"
+    "static/js/main.6d1ec9d0.chunk.js"
   ]
 }

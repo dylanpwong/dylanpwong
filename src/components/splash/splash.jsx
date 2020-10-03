@@ -7,6 +7,7 @@ import backStreets from '../../images/backstreets.gif'
 import cyberPunk from '../../images/cyberpunk.gif';
 import goodfish from '../../images/goodfish.gif';
 import outsideFlag from '../../images/outsideFlag.gif';
+// import profilePicN from '../../images/profilePocN.jpg';
 // import fish from '../../images/fish.gif';
 // import profilePic from '../../images/profile1.jpeg'
 import cherry from '../../images/cherry3.gif';
@@ -221,6 +222,7 @@ class Splash extends React.Component{
         return (
           <div className="profilePictureContainer">
             <img className="profilePic" src={side} alt="" />
+            {/* <img className="profilePic" src={profilePicN} alt="" /> */}
             <div className="typeWritterContainer">
               {" "}
               {/* type writter container */}

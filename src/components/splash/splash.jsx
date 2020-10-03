@@ -4,6 +4,9 @@ import cafe from "../../images/cafe.gif";
 import openFree from '../../images/openfree.gif';
 import ramenShop from '../../images/ramenShop.gif'
 import backStreets from '../../images/backstreets.gif'
+import cyberPunk from '../../images/cyberpunk.gif';
+import goodfish from '../../images/goodfish.gif';
+import outsideFlag from '../../images/outsideFlag.gif';
 // import fish from '../../images/fish.gif';
 // import profilePic from '../../images/profile1.jpeg'
 import cherry from '../../images/cherry3.gif';
@@ -21,7 +24,7 @@ class Splash extends React.Component{
 
         this.state={
             backgroundNumber: 0,
-            backgroundPics: [backStreets,cafe,openFree,ramenShop],
+            backgroundPics: [backStreets,cafe,openFree,ramenShop,cyberPunk,goodfish,outsideFlag],
             time: 0,
             blinkerRemoved: false,
             about: false,
@@ -282,6 +285,7 @@ class Splash extends React.Component{
               {/*pos abs ignores flex*/}
               <img
                 className="backgroundImg"
+                // src={outsideFlag}
                 src={this.state.backgroundPics[this.state.backgroundNumber]}
                 alt="cafe gif!"
               />

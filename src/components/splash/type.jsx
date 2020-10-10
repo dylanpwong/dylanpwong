@@ -23,7 +23,7 @@ class Type extends React.Component{
     componentDidMount(){
         this.setState({interval:"reload"})//triggers updateFunc
     }
-
+//A React Enthusiast,  javaScript Expert, A Software developer trying to solve small problems in big ways
     componentDidUpdate(){
     //    debugger
         if(this.state.wel !== this.props.welcome){
